@@ -120,3 +120,85 @@ Em alguns casos específicos é possível usar o rebase mesmo em repositórios c
 <p><li>Se você quer preservar o histórico completo do projeto, independente da complexidade, use sempre merge;</li></p>
 
 <p><li>rebase pode facilitar a resolução de conflitos, porém pode também ser mais complicado voltar o código ao estágio anterior em caso de conflitos mais complexos.</li></p>
+
+<h2>Como desfazer alterações das quais não vamos precisar mais?</h2>
+
+<p>Desfazer alterações antes de adicioná-las;</p> 
+<p>Depois de adicioná-las, mas antes de commitá-las;</p> 
+<p>após realizar o commit;</p>
+
+Respectivamente:
+
+```
+git checkout
+git reset
+git revert
+```
+
+<p>Com o git checkout nós desfazemos uma alteração que ainda não foi adicionada ao index ou stage, ou seja, antes do git add. Depois de adicionar com git add, para desfazer uma alteração, precisamos tirá-la deste estado, com git reset. Agora, se já realizamos o commit, o comando git revert pode nos salvar.</p>
+
+<h2>Armazenando temporariamente algumas de nossas alterações:</h2>
+
+<p>Quando precisamos parar o desenvolvimento de algo no meio para trabalhar em outra coisa, utilizamos o:</p>
+
+```
+git stash
+```
+<p>Quando precisamos pausar o desenvolvimento de alguma funcionalidade, ou correção, antes de finalizar, talvez não seja interessante realizar um commit, pois o nosso código pode não estar funcionando ainda. Nesse caso é interessante salvar o trabalho para podermos voltar a ele depois.</p>
+
+<h2>Exibindo as mudanças com o diff:</h2>
+
+<p>Com o comando git diff, visualizamos as mudanças realizadas em determinado código. Podemos ver as diferenças entre commits, branches, etc.</p>
+
+Assim o ```git diff``` exibe as mudanças:
+
+```
++ linha adicionada
+- linha removida
+- linha modificada (versão antiga)
++ linha modificada (nova versão)
+```
+
+<p>O sinal de subtração (-) antes da linha indica que ela não está mais presente no arquivo. Já o sinal de adição (+) mostra que é uma linha nova. Alterações são representadas por uma remoção e uma adição de linha.</p>
+
+<h2>Criando releases no GitHub e qual a diferença de Tag e Release:</h2>
+
+<p>Tag e Release, embora sejam dois conceitos que estão relacionados entre si, eles não são iguais.</p>
+
+<h3>Tag:</h3>
+
+<p>Uma Tag no Git é uma referência estática a um ponto específico na história do seu repositório. Ela é usada para marcar commits importantes, como versões estáveis, marcos de desenvolvimento ou releases principais. Basicamente, uma Tag é uma forma de nomear um commit específico para que você possa referenciá-lo facilmente posteriormente.
+
+As Tags são úteis para marcar pontos significativos na linha do tempo do seu projeto, permitindo que você recupere facilmente versões específicas do código no futuro. Elas são usadas principalmente para identificar versões estáveis do software, como v1.0, v2.0, etc. As Tags também podem ser anotadas, ou seja, você pode adicionar uma mensagem descritiva para fornecer mais informações sobre aquela versão específica.
+
+Criamos tags no Git, via comando:</p>
+```git tag```
+
+<h3>Release:</h3>
+
+<p>Uma Release no GitHub é uma versão específica do seu projeto que é disponibilizada para download ou deploy. É uma forma de empacotar um conjunto de arquivos do seu repositório em um formato que possa ser facilmente distribuído. Uma Release geralmente contém arquivos compilados, binários, documentação ou qualquer outra coisa necessária para distribuir seu software.
+
+Ao criar uma Release no GitHub, você pode escolher quais commits, Tags ou branches deseja incluir no pacote. Isso permite que você selecione exatamente quais alterações ou versões do seu código fazem parte daquela Release específica. Cada Release geralmente possui um número de versão associado, como v1.0.0, v2.1.3, etc.</p>
+
+<h2>Criando Releases no GitHub:</h2>
+
+<p>Ao enviar uma tag para o GitHub, via comando git push, uma release não é criada automaticamente. Caso você queira criar uma release baseada em uma tag, deve fazer isso manualmente. A seguir um passo a passo de como realizar esse procedimento:</p>
+
+<p>1) Acesse a página do seu repositório no GitHub e clique no link Tags:</p>
+
+![1](https://github.com/thiiagolopes/estudos-frontend/assets/120226554/7859dbd0-8681-4869-8155-b5553ea65f46)
+
+<p>2) Na página de listagem de tags, clique no botão Releases:</p>
+
+![2](https://github.com/thiiagolopes/estudos-frontend/assets/120226554/1e65d926-4915-4188-b190-41b8125d7b11)
+
+<p>3) Repare que o GitHub indica que não existem releases no repositório e exibe um botão para criar uma nova release. Clique nesse botão para abrir a página de criação de release, na qual você deve escolher a tag associada à nova release sendo criada, além de também poder preencher um título e uma descrição:</p>
+
+![3](https://github.com/thiiagolopes/estudos-frontend/assets/120226554/d7d1e5e7-59ba-4690-b419-d40f4d1ce908)
+
+<p>4) Pronto! Após isso a nova release será exibida na tela de releases:</p>
+
+![4](https://github.com/thiiagolopes/estudos-frontend/assets/120226554/58ac0f72-ee9a-4b9e-bd7a-eb7cd18cd654)
+
+
+
