@@ -12,3 +12,6 @@ Esta é a grade de estudos que montei até o momento:
   <li>HTML & CSS</li>
   <li>Javascript</li>
 </ul>
+
+
+<h4><strong>IMPORTANTE: Por se tratar de um conteúdo não desenvolvido por um instrutor/professor, pode haver alguns erros e/ou desencontro de informações. Neste caso, estou abertamente receptivo a sugestões e correções.</strong></h4>
