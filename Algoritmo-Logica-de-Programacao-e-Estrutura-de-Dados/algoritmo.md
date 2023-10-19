@@ -38,6 +38,6 @@ Fim-Algoritmo
 
 <h2>Curso completo e gratuito de Algoritmo:</h2>
 
-<p>Para ter acesso ao curso completo de algoritmo, ministrado pelo Prof. Gustavo Guanabara <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV">clique aqui</a>, bons estudos!</p>
+<p>Para ter acesso ao curso completo de algoritmo ministrado pelo Prof. Gustavo Guanabara, <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dmSj0MHol_aoNYCSGFqvfXV">clique aqui</a>, e bons estudos!</p>
 
 <p>Todos os direitos reservados ao Gustavo Guanabara - Curso em Vídeo</p>
